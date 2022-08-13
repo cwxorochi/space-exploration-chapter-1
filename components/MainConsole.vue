@@ -12,7 +12,7 @@
         </h1>
       </div>
 
-      <div class="py-6 px-6 sm:py-12 sm:px-12 border border-white max-w-7xl mx-auto main-console">
+      <div class="py-6 px-6 sm:py-12 sm:px-12 border border-white max-w-7xl mx-auto main-console" style="opacity: 0;">
         <div class="text-center " v-show="frame === 1">
           <h1 class="frame-1-ele text-3xl sm:text-4xl text-white font-theme">Chapter 1</h1>
           <h1 class="frame-1-ele text-5xl sm:text-8xl text-yellow-600 font-theme">The Sun</h1>
@@ -56,7 +56,8 @@ export default {
 
     this.$gsap.timeline()
       .from('.main-title', { duration: 1, y: 100 })
-      .from('.main-console', { duration: 1, y: 20, opacity: 0, width: '80%' })
+      .to('.main-console', { opacity: 1, duration: 1} )
+      .from('.main-console', { duration: 1, y: 20, width: '80%' }, '<')
       .from('.frame-1-ele', { duration: 1.5, y: 50, opacity: 0, stagger: 0.2, ease: 'back'})
 
     // setTimeout(() => {
