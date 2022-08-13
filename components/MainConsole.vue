@@ -3,7 +3,7 @@
     class="main-console-component h-screen flex flex-col justify-center"
     :style="{ 'background-position': bgPos }"
   >
-    <div class="container mx-auto">
+    <div class="container mx-auto px-2">
       <div class="header-title-wrapper mb-10 overflow-hidden transition">
         <h1
           class="main-title text-5xl sm:text-7xl font-theme text-center main-console-title"
@@ -12,21 +12,21 @@
         </h1>
       </div>
 
-      <div class="py-12 px-12 border border-white max-w-7xl mx-auto main-console">
+      <div class="py-6 px-6 sm:py-12 sm:px-12 border border-white max-w-7xl mx-auto main-console">
         <div class="text-center " v-show="frame === 1">
-          <h1 class="frame-1-ele text-4xl text-white font-theme">Chapter 1</h1>
-          <h1 class="frame-1-ele text-8xl text-yellow-600 font-theme">The Sun</h1>
+          <h1 class="frame-1-ele text-3xl sm:text-4xl text-white font-theme">Chapter 1</h1>
+          <h1 class="frame-1-ele text-5xl sm:text-8xl text-yellow-600 font-theme">The Sun</h1>
           <div class="frame-1-ele">
-            <BaseButton class="text-xl mt-16" @click="beginInspect">Inspect The Sun</BaseButton>
+            <BaseButton class="text-lg sm:text-xl mt-16" @click="beginInspect">Inspect The Sun</BaseButton>
           </div>
         </div>
         <div v-show="frame === 2">
-          <h1 class="frame-2-ele text-5xl font-theme text-center text-white mb-10">Attributes of <span class="text-yellow-600">The Sun</span></h1>
-          <h4 class="frame-2-ele text-2xl text-white mb-4">
+          <h1 class="frame-2-ele text-4xl sm:text-5xl font-theme text-center text-white mb-10">Attributes of <span class="text-yellow-600">The&nbsp;Sun</span></h1>
+          <h4 class="frame-2-ele text-xl sm:text-2xl text-white mb-4 flex gap-1 flex-col items-start sm:flex-row">
             <span class="px-3 py-1 bg-indigo-400 mr-3 rounded-md font-theme text-xl">PI</span>
             3.12312532342623
           </h4>
-          <h4 class="frame-2-ele text-2xl text-white">
+          <h4 class="frame-2-ele text-xl sm:text-2xl text-white flex gap-1 flex-col items-start sm:flex-row">
             <span class="px-3 py-1 bg-indigo-400 mr-3 rounded-md font-theme text-xl">Circumference</span>
             3.12312532342623
           </h4>
