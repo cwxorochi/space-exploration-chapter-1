@@ -33,7 +33,7 @@ Pre-requisite for MacOs
 1. Pull from the git.
 2. ```cd``` to the root directory
 3. Create .env at root directory and insert the key as below
-    BACKEND_API_URL=http://naluri-be.test
+    BACKEND_API_URL=http://space-exploration-chapter-1-console.test
 4. At terminal, execute ```yarn```
 5. Again at terminal, execute ```yarn dev```
 6. Open the link shown on the terminal. And you are good to go.
