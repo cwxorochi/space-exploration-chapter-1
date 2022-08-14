@@ -39,3 +39,12 @@ Pre-requisite for MacOs
 6. Open the link shown on the terminal. And you are good to go.
 
 ![Preview of the app](https://res.cloudinary.com/kurtcloudspace/image/upload/v1660491540/space-preview-2_ro11ec.gif)
+
+## Application flow
+In nuxtjs, first we view the ```pages``` as independent route itself, meaning ```pages/index.vue``` is actually home page (```/```) of the application, ```pages/help.vue``` is the url of ```/help``` itself.
+
+At folder ```layouts/default.vue```, defines the layout to use throughout the pages, in layout file, ```<nuxt/>``` tag will render the vue file from ```pages```.
+
+To make it scalable and reusable, base components are produced in ```components/base``` file. One is ```BaseButton``` which has pre-designed styling which can be reused. Second is ```CircleLoader``` for loading animation preview.
+
+This application used ```@nuxtjs/axios``` as a client to communicate with backend endpoint. Information is stored at vue store management (```vuex```)

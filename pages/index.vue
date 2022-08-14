@@ -3,7 +3,12 @@
 </template>
 
 <script>
+import MainConsole from '@/components/MainConsole'
+
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  components: {
+    MainConsole,
+  },
 }
 </script>
