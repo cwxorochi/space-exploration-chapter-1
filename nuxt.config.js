@@ -38,12 +38,25 @@ export default {
     'nuxt-gsap-module'
   ],
 
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    '@nuxtjs/axios'
+  ],
+
+  axios: {
+    baseURL: process.env.BACKEND_API_URL
+  },
+
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://naluri-be.test/api'
+  },
+
   gsap: {
     /* Module Options */
   },
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
+  plugins: [
+    { src: '@/plugins/base-components.js' }
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
